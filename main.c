@@ -12,14 +12,15 @@ int main(int argc, char **argv){
 
 	if(argc<2)
     {
-  	  printf("Usage : test_program_executable <test_file>");
-      exit(1);
+  	    printf("Usage : test_program_executable <test_file>");
+        exit(1);
     }
+
 	struct stat stt;
-	int res,result;
-	if((res= lstat(argv[1],&stt))<0)
+	int res, result;
+	if((res=stat(argv[1],&stt))<0)
 	{
-		printf("%d\n",res);
+		printf("%d\n", res);
 		perror("Stat failed\n");
 	}
 	else
@@ -27,11 +28,11 @@ int main(int argc, char **argv){
 		if(S_ISREG(stt.st_mode))
 		{
 			char buf[LEN];
-			FILE *f=fopen(argv[1],"r+");
-			while(fgets(buf,LEN,f))
+			FILE *f = fopen(argv[1], "rb");
+			while(fgets(buf, LEN, f))
 			{
-				int i=0;
-				while(buf[i]!='\0')
+				int i = 0;
+				while(buf[i] != '\0')
 				{
 					result=at_command_parse(buf[i]);
 					if(result == 1)
