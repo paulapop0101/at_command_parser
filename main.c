@@ -38,8 +38,8 @@ int main(int argc, char **argv){
 						printf("ready ok\n");
 					if(result == 2)
 						printf("ready with error %c\n",buf[i]);
-					if(result == 0)
-						printf("not ready %c\n",buf[i]);
+					//if(result == 0)
+						//printf("not ready %c\n",buf[i]);
 					i++;
 				}
 				
