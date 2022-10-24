@@ -16,6 +16,7 @@ STATE_MACHINE_RETURN_VALUE at_command_parse(uint8_t current_character)
 			 	state = 2;
 			 }
 			 else{
+				state = 0;
 			 	return STATE_MACHINE_READY_WITH_ERROR;
 			 }
 			 break;
@@ -31,6 +32,7 @@ STATE_MACHINE_RETURN_VALUE at_command_parse(uint8_t current_character)
 			 	state = 5;
 			 }
 			 else{
+				state = 0;
 			 	return STATE_MACHINE_READY_WITH_ERROR;
 			 }
 			break;
@@ -40,6 +42,7 @@ STATE_MACHINE_RETURN_VALUE at_command_parse(uint8_t current_character)
 			 	state = 6;
 			 }
 			 else{
+				state = 0;
 			 	return STATE_MACHINE_READY_WITH_ERROR;
 			 }
 			break;
@@ -49,6 +52,7 @@ STATE_MACHINE_RETURN_VALUE at_command_parse(uint8_t current_character)
 			 	state = 9;
 			 }
 			 else{
+				state = 0;
 			 	return STATE_MACHINE_READY_WITH_ERROR;
 			 }
 			break;
@@ -58,6 +62,7 @@ STATE_MACHINE_RETURN_VALUE at_command_parse(uint8_t current_character)
 			 	state = 15;
 			 }
 			 else{
+				state = 0;
 			 	return STATE_MACHINE_READY_WITH_ERROR;
 			 }
 			break;
@@ -67,15 +72,18 @@ STATE_MACHINE_RETURN_VALUE at_command_parse(uint8_t current_character)
 			 	state = 7;
 			 }
 			 else{
+				state = 0;
 			 	return STATE_MACHINE_READY_WITH_ERROR;
 			 }
 			break;
 		 }
 		case 7:{
 			 if (current_character == 0x0A){
+				state = 0;
 				return STATE_MACHINE_READY_OK;
 			 }
 			 else{
+				state = 0;
 			 	return STATE_MACHINE_READY_WITH_ERROR;
 			 }
 			break;
@@ -89,6 +97,7 @@ STATE_MACHINE_RETURN_VALUE at_command_parse(uint8_t current_character)
 			 	state = 10;
 			 }
 			 else{
+				state = 0;
 			 	return STATE_MACHINE_READY_WITH_ERROR;
 			 }
 			break;
@@ -98,6 +107,7 @@ STATE_MACHINE_RETURN_VALUE at_command_parse(uint8_t current_character)
 			 	state = 11;
 			 }
 			 else{
+				state = 0;
 			 	return STATE_MACHINE_READY_WITH_ERROR;
 			 }
 			break;
@@ -107,6 +117,7 @@ STATE_MACHINE_RETURN_VALUE at_command_parse(uint8_t current_character)
 			 	state = 12;
 			 }
 			 else{
+			state = 0;
 			 	return STATE_MACHINE_READY_WITH_ERROR;
 			 }
 			break;
@@ -116,15 +127,18 @@ STATE_MACHINE_RETURN_VALUE at_command_parse(uint8_t current_character)
 			 	state = 13;
 			 }
 			 else{
+				state = 0;
 			 	return STATE_MACHINE_READY_WITH_ERROR;
 			 }
 			break;
 		 }
 		case 13:{
 			 if (current_character == 0x0A){
+				state = 0;
 			 	return STATE_MACHINE_READY_WITH_ERROR;
 			 }
 			 else{
+				state = 0;
 			 	return STATE_MACHINE_READY_WITH_ERROR;
 			 }
 			break;
@@ -141,6 +155,7 @@ STATE_MACHINE_RETURN_VALUE at_command_parse(uint8_t current_character)
 				state = 16;
 			}
 			 else{
+				state = 0;
 			 	return STATE_MACHINE_READY_WITH_ERROR;
 			 }
 			break;
@@ -150,6 +165,7 @@ STATE_MACHINE_RETURN_VALUE at_command_parse(uint8_t current_character)
 			 	state = 17;
 			 }
 			 else{
+				state = 0;
 			 	return STATE_MACHINE_READY_WITH_ERROR;
 			 }
 			break;
@@ -162,6 +178,7 @@ STATE_MACHINE_RETURN_VALUE at_command_parse(uint8_t current_character)
 			 	state = 18;
 			 }
 			 else{
+				state = 0;
 			 	return STATE_MACHINE_READY_WITH_ERROR;
 			 }
 			break;
@@ -171,6 +188,7 @@ STATE_MACHINE_RETURN_VALUE at_command_parse(uint8_t current_character)
 			 	state = 19;
 			 }
 			 else{
+				state = 0;
 			 	return STATE_MACHINE_READY_WITH_ERROR;
 			 }
 			break;
@@ -183,6 +201,7 @@ STATE_MACHINE_RETURN_VALUE at_command_parse(uint8_t current_character)
 			 	state = 4;
 			 }
 			 else{
+				state = 0;
 			 	return STATE_MACHINE_READY_WITH_ERROR;
 			 }
 			break;
