@@ -18,6 +18,7 @@ typedef enum
     STATE_MACHINE_READY_WITH_ERROR
 }STATE_MACHINE_RETURN_VALUE;
 
-STATE_MACHINE_RETURN_VALUE at_command_parse(uint8_t current_character);
-
+STATE_MACHINE_RETURN_VALUE at_command_parse(uint8_t current_character, uint8_t flag);
+void print_transaction(AT_COMMAND_DATA *, uint8_t flag);
+extern AT_COMMAND_DATA transfer;
 #endif
